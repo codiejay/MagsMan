@@ -1,0 +1,244 @@
+
+
+* { 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body { 
+
+    main { 
+      position: relative;
+
+        #banner { 
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          height: auto;
+          margin-bottom: 2em;
+            #bannerImg { 
+              background: url('./assets/bannerImg.jpg');
+              background-size: cover;
+              background-position: bottom;
+            }
+            #bannerDetails { 
+              padding: 35% 20% 20% 20%;
+                #bannerLogo { 
+                  width: 70%;
+                  height: 90px;
+                  background: url('./assets/logo.svg');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  margin-bottom: 20%;
+                }
+                #bannerText { 
+                  p { 
+                    margin-bottom: 2em;
+                    font-family: 'IBM Plex Mono', monospace;
+                    line-height: 1.62em;
+                  }
+                }
+                #bannerBttn { 
+                  display: block;
+                  text-decoration: none;
+                  font-family: 'IBM Plex Mono', monospace;
+                  font-weight: bolder;
+                  color: black;
+                  font-size: 1.4em;
+                  margin-top: 4em;
+                  border-radius: 200px;
+                  border: 1px solid black;
+                  width: fit-content;
+                  padding: 0.7em 1.1em
+                }
+            }
+        }
+
+        #works { 
+          height: 100vh;
+          padding: 6%;
+          position: relative;
+          z-index: 20;
+          margin-bottom: 10vh;
+            h1 { 
+              font-size: 2.7em;
+              font-family: 'IBM Plex Mono', monospace;
+              font-weight: bold;
+            }
+            .ytVideo { 
+              width: 60%;
+              height: 80%;
+              background: linear-gradient(#00000067, #00000067), url('./assets/YTthubnail.jpg');
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              margin: 6em auto 0 auto;
+              position: relative;
+                &::after { 
+                  width: 99%;
+                  height: 99%;
+                  background-color: rgba(255, 0, 0, 0);
+                  content: ' ';
+                  display: inline-block;
+                  z-index: -2;
+                  position: absolute;
+                  border: 1px solid black;
+                  top: 10%;
+                  left: 7%
+                }
+            }
+
+            .playBttn { 
+              width: 90px;
+              height: 90px;
+              display: block;
+              position: absolute;
+              top: 55vh;
+              left: 50%;
+                div { 
+                  width: 65%;
+                  height: 65%;
+                  background: url('./assets/playIc.svg');
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  position: relative;
+                    &::after { 
+                      width: 120%;
+                      height: 120%;
+                      background-color: white;
+                      transform: scale(0.6);
+                      border-radius: 2000px;
+                      display: inline-block;
+                      position: absolute;
+                      content: '';
+                      z-index: 0;
+                      top: -10%;
+                      left: -10%;
+                      animation: scale 1.7s infinite;
+                    }
+                }
+            }
+        }
+
+        #clients { 
+          height: 50vh;
+          text-align: center;
+          padding-top: 10vh;
+            h1 { 
+              font-family: 'IBM PLEX MONO';
+              font-weight: 900;
+              font-size: 2.3em;
+              margin-bottom: 0.4em;
+            }
+            p { 
+              font-family: 'IBM PLEX MONO';
+            }
+            .clientList { 
+              display: grid;
+              width: 100%;
+              margin: 3em 0;
+              grid-template-columns: repeat(5, 17%);
+              gap: 3em;
+              justify-content: center;
+                div {
+                  width: 100%;
+                  height: 200px;
+                  background-color: red;
+                  margin: 0 auto;
+                  transform: scale(0.8);
+                }
+                div:nth-child(1) { 
+                  background: url('./assets/mtn.svg');
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                }
+                div:nth-child(2) { 
+                  background: url('./assets/total.svg');
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                }
+                div:nth-child(3) { 
+                  background: url('./assets/gtb.svg');
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                }
+                div:nth-child(4) { 
+                  background: url('./assets/artX.svg');
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                }
+                div:nth-child(5) { 
+                  background: url('./assets/ekoAtlantic.svg');
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                }
+            }
+        }
+
+        #sendMail { 
+          height: 100vh;
+          background: linear-gradient(to top, #0000008c, #0000008c), url('./assets/contactImg.jpg');
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          text-align: center;
+          padding-top: 25%;
+            h1 { 
+              font-size: 4em;
+              font-family: 'IBM PLEX MONO';
+              font-weight: 900;
+              color: white;
+            }
+            p { 
+              font-family: 'IBM PLEX MONO';
+              color: white;
+            }
+            a { 
+              text-decoration: none;
+              color: white;
+              display: block;
+              padding: 0.8em 1.6em;
+              border: 1px solid white;
+              font-size: 1.3em;
+              font-family: 'IBM PLEX MONO';
+              font-weight: 300;
+              width: 30%;
+              margin: 3em auto 0 auto;
+              border-radius: 200px;
+            }
+        }
+        footer { 
+          background-color: black;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          color: white;
+          font-family: 'IBM PLEX MONO';
+          font-weight: 100;
+          padding: 20px 0;
+          text-align: center;
+            a { 
+              color: white;
+              text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+@keyframes scale { 
+  from { 
+    transform: scale(0);
+    opacity: 1;
+  }
+  to { 
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}

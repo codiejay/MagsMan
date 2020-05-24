@@ -1,0 +1,292 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body main {
+  position: relative;
+}
+
+body main #banner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: auto;
+  margin-bottom: 2em;
+}
+
+body main #banner #bannerImg {
+  background: url("./assets/bannerImg.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+body main #banner #bannerDetails {
+  padding: 35% 20% 20% 20%;
+}
+
+body main #banner #bannerDetails #bannerLogo {
+  width: 70%;
+  height: 90px;
+  background: url("./assets/logo.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20%;
+}
+
+body main #banner #bannerDetails #bannerText p {
+  margin-bottom: 2em;
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 1.62em;
+}
+
+body main #banner #bannerDetails #bannerBttn {
+  display: block;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bolder;
+  color: black;
+  font-size: 1.4em;
+  margin-top: 4em;
+  border-radius: 200px;
+  border: 1px solid black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.7em 1.1em;
+}
+
+body main #works {
+  height: 100vh;
+  padding: 6%;
+  position: relative;
+  z-index: 20;
+  margin-bottom: 10vh;
+}
+
+body main #works h1 {
+  font-size: 2.7em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+}
+
+body main #works .ytVideo {
+  width: 60%;
+  height: 80%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00000067), to(#00000067)), url("./assets/YTthubnail.jpg");
+  background: linear-gradient(#00000067, #00000067), url("./assets/YTthubnail.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 6em auto 0 auto;
+  position: relative;
+}
+
+body main #works .ytVideo::after {
+  width: 99%;
+  height: 99%;
+  background-color: rgba(255, 0, 0, 0);
+  content: ' ';
+  display: inline-block;
+  z-index: -2;
+  position: absolute;
+  border: 1px solid black;
+  top: 10%;
+  left: 7%;
+}
+
+body main #works .playBttn {
+  width: 90px;
+  height: 90px;
+  display: block;
+  position: absolute;
+  top: 55vh;
+  left: 50%;
+}
+
+body main #works .playBttn div {
+  width: 65%;
+  height: 65%;
+  background: url("./assets/playIc.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+body main #works .playBttn div::after {
+  width: 120%;
+  height: 120%;
+  background-color: white;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  border-radius: 2000px;
+  display: inline-block;
+  position: absolute;
+  content: '';
+  z-index: 0;
+  top: -10%;
+  left: -10%;
+  -webkit-animation: scale 1.7s infinite;
+          animation: scale 1.7s infinite;
+}
+
+body main #clients {
+  height: 50vh;
+  text-align: center;
+  padding-top: 10vh;
+}
+
+body main #clients h1 {
+  font-family: 'IBM PLEX MONO';
+  font-weight: 900;
+  font-size: 2.3em;
+  margin-bottom: 0.4em;
+}
+
+body main #clients p {
+  font-family: 'IBM PLEX MONO';
+}
+
+body main #clients .clientList {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  margin: 3em 0;
+  -ms-grid-columns: (17%)[5];
+      grid-template-columns: repeat(5, 17%);
+  gap: 3em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #clients .clientList div {
+  width: 100%;
+  height: 200px;
+  background-color: red;
+  margin: 0 auto;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+body main #clients .clientList div:nth-child(1) {
+  background: url("./assets/mtn.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main #clients .clientList div:nth-child(2) {
+  background: url("./assets/total.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main #clients .clientList div:nth-child(3) {
+  background: url("./assets/gtb.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main #clients .clientList div:nth-child(4) {
+  background: url("./assets/artX.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main #clients .clientList div:nth-child(5) {
+  background: url("./assets/ekoAtlantic.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main #sendMail {
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0000008c), to(#0000008c)), url("./assets/contactImg.jpg");
+  background: linear-gradient(to top, #0000008c, #0000008c), url("./assets/contactImg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 25%;
+}
+
+body main #sendMail h1 {
+  font-size: 4em;
+  font-family: 'IBM PLEX MONO';
+  font-weight: 900;
+  color: white;
+}
+
+body main #sendMail p {
+  font-family: 'IBM PLEX MONO';
+  color: white;
+}
+
+body main #sendMail a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 0.8em 1.6em;
+  border: 1px solid white;
+  font-size: 1.3em;
+  font-family: 'IBM PLEX MONO';
+  font-weight: 300;
+  width: 30%;
+  margin: 3em auto 0 auto;
+  border-radius: 200px;
+}
+
+body main footer {
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  color: white;
+  font-family: 'IBM PLEX MONO';
+  font-weight: 100;
+  padding: 20px 0;
+  text-align: center;
+}
+
+body main footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+@-webkit-keyframes scale {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2.4);
+            transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes scale {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2.4);
+            transform: scale(2.4);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */
