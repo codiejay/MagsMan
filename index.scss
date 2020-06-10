@@ -231,6 +231,125 @@ body {
     }
 }
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
+  body { 
+    overflow-x: hidden;
+      main { 
+          #banner { 
+            background: linear-gradient(#ffffffd5, #ffffffd5), url('./assets/bannerImg.jpg');
+            display: block;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+              #bannerImg { 
+                display: none;
+              }
+          }
+
+          #works { 
+            height: 60vh;
+            margin-bottom: 10vh;
+              .ytVideo { 
+                width: 100%;
+                height: 90%;
+                  &::after { 
+                    left: 5%;
+                    top: 7%;
+                  }
+              }
+              .playBttn { 
+                top: 40vh;
+              }
+          }
+
+          #clients { 
+            .clientList { 
+              grid-template-columns: repeat(5, 14%);
+            }
+          }
+
+          #sendMail { 
+            h1 { 
+              margin-bottom: 1em;
+            }
+            height: 80vh;
+            padding: 20vh 6%;
+            
+          }
+      }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) { 
+  body { 
+      main { 
+        overflow-x: scroll;
+        #banner { 
+          background: linear-gradient(#ffffffd5, #ffffffd5), url('./assets/bannerImg.jpg');
+          display: block;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100vh;
+            #bannerImg { 
+              display: none;
+            }
+            #bannerDetails { 
+              padding: 35% 10% 20% 10%;
+            }
+        }
+        
+        #works { 
+          height: 60vh;
+          margin-bottom: 10vh;
+            .ytVideo { 
+              width: 100%;
+              height: 90%;
+                &::after { 
+                  left: 4%;
+                  top: 4%;
+                }
+            }
+            .playBttn { 
+              top: 43vh;
+              left: 45%;
+            }
+        }
+
+        #clients { 
+          height: auto;
+          margin-bottom: 1em;
+          .clientList { 
+            grid-template-columns: 20% 20% 20%;
+            overflow-x: scroll;
+            gap: auto;
+              div { 
+                height: 100px;
+              }
+          }
+        }
+
+        #sendMail { 
+          padding: 34vh 3px 0 3px;
+           h1 { 
+             font-size: 2.4em;
+           }
+           p { 
+             font-size: 0.7em;
+           }
+           a { 
+             width: 80%;
+             padding: 0.4em 1em;
+           }
+        }
+
+        footer { 
+          font-size: 0.8em;
+        }
+      }
+  }
+ }
+
 
 @keyframes scale { 
   from { 
