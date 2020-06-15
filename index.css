@@ -5,8 +5,13 @@
           box-sizing: border-box;
 }
 
-body main {
+body {
   position: relative;
+}
+
+body main {
+  -webkit-transition: height 3s;
+  transition: height 3s;
 }
 
 body main #banner {
@@ -19,9 +24,9 @@ body main #banner {
 }
 
 body main #banner #bannerImg {
-  background: url("./assets/bannerImg.jpg");
+  background: url("./assets/newBannerImg.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
 }
 
 body main #banner #bannerDetails {
@@ -61,6 +66,7 @@ body main #banner #bannerDetails #bannerBttn {
 }
 
 body main #works {
+  cursor: pointer;
   height: 100vh;
   padding: 6%;
   position: relative;
@@ -75,6 +81,7 @@ body main #works h1 {
 }
 
 body main #works .ytVideo {
+  cursor: pointer;
   width: 60%;
   height: 80%;
   background: -webkit-gradient(linear, left top, left bottom, from(#00000067), to(#00000067)), url("./assets/YTthubnail.jpg");
@@ -104,6 +111,7 @@ body main #works .playBttn {
   height: 90px;
   display: block;
   position: absolute;
+  cursor: pointer;
   top: 55vh;
   left: 50%;
 }
@@ -264,20 +272,76 @@ body main footer a {
   text-decoration: underline;
 }
 
+body .iframe {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: white;
+  overflow-y: hidden;
+}
+
+body .iframe iframe {
+  width: 60%;
+  height: 70vh;
+  position: absolute;
+  top: 15%;
+  left: 20%;
+}
+
+body .iframe .closeIcon {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  top: 5%;
+  right: 4%;
+  position: absolute;
+  border-radius: 200px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body .iframe .closeIcon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body .iframe .closeIcon::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("./assets/x.svg");
+  position: absolute;
+  right: 35%;
+  top: 25%;
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   body {
     overflow-x: hidden;
   }
   body main #banner {
-    background: -webkit-gradient(linear, left top, left bottom, from(#ffffffd5), to(#ffffffd5)), url("./assets/bannerImg.jpg");
-    background: linear-gradient(#ffffffd5, #ffffffd5), url("./assets/bannerImg.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(#030303d5), to(#00000071)), url("./assets/newBannerImg.jpg");
+    background: linear-gradient(#030303d5, #00000071), url("./assets/newBannerImg.jpg");
     display: block;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
   }
-  body main #banner #bannerImg {
-    display: none;
+  body main #banner #bannerDetails #bannerLogo {
+    background: url("./assets/magsManLogo.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body main #banner #bannerDetails #bannerBttn {
+    color: white;
+    border: 1px solid white;
   }
   body main #works {
     height: 60vh;
@@ -305,6 +369,15 @@ body main footer a {
   body main #sendMail h1 {
     margin-bottom: 1em;
   }
+  body .iframe {
+    height: 100vh;
+  }
+  body .iframe iframe {
+    width: 90%;
+    height: 30vh;
+    margin: 0 auto;
+    left: 5%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -312,19 +385,28 @@ body main footer a {
     overflow-x: scroll;
   }
   body main #banner {
-    background: -webkit-gradient(linear, left top, left bottom, from(#ffffffd5), to(#ffffffd5)), url("./assets/bannerImg.jpg");
-    background: linear-gradient(#ffffffd5, #ffffffd5), url("./assets/bannerImg.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(#030303d5), to(#00000071)), url("./assets/newBannerImg.jpg");
+    background: linear-gradient(#030303d5, #00000071), url("./assets/newBannerImg.jpg");
     display: block;
     background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-  }
-  body main #banner #bannerImg {
-    display: none;
+    color: white;
   }
   body main #banner #bannerDetails {
     padding: 35% 10% 20% 10%;
+  }
+  body main #banner #bannerDetails #bannerLogo {
+    background: url("./assets/magsManLogo.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  body main #banner #bannerDetails #bannerBttn {
+    color: white;
+    border: 1px solid white;
   }
   body main #works {
     height: 60vh;
@@ -370,6 +452,16 @@ body main footer a {
   }
   body main footer {
     font-size: 0.8em;
+  }
+  body .iframe {
+    height: 100vh;
+    width: 100vw;
+  }
+  body .iframe iframe {
+    width: 100%;
+    height: 30vh;
+    margin: 0 auto;
+    left: 1%;
   }
 }
 
